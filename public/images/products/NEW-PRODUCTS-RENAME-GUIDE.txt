@@ -1,0 +1,187 @@
+NEW PRODUCT IMAGE RENAME GUIDE
+==============================
+
+Folder to paste into:
+  public/images/products/
+
+Instructions:
+  1. Rename your image to the EXACT filename in the right column.
+  2. Prefer .png ( .jpg also works ).
+  3. Paste/replace the file in public/images/products/
+  4. Keep the same name — do not change code.
+
+PRODUCT NAME  =>  EXACT FILENAME
+--------------------------------
+Hand Operated Hydraulic Pump
+  =>  Hand-Operated-Hydraulic-Pump.png
+
+Hydraulic Crimping Head
+  =>  Hydraulic-Crimping-Head.png
+
+Hydraulic Cable Cutter
+  =>  Hydraulic-Cable-Cutter.png
+
+1 Bag Hydraulic Hopper Concrete Mixer
+  =>  1-Bag-Hydraulic-Hopper-Concrete-Mixer.png
+
+3 Bag Hydraulic Hopper Concrete Mixer
+  =>  3-Bag-Hydraulic-Hopper-Concrete-Mixer.png
+
+Electric Concrete Mixer – 3 Bag
+  =>  Electric-Concrete-Mixer-3-Bag.png
+
+Hydraulic Concrete Block Making Machine
+  =>  Hydraulic-Concrete-Block-Making-Machine.png
+
+Fly Ash Bricks
+  =>  Fly-Ash-Bricks.png
+
+Bricks
+  =>  Bricks.png
+
+Refractory Fire Bricks
+  =>  Refractory-Fire-Bricks.png
+
+Concrete Pavers 300×300×60mm
+  =>  Concrete-Pavers-300x300x60mm.png
+
+Interlocking Paver Blocks
+  =>  Interlocking-Paver-Blocks.png
+
+Colorado Paver Blocks
+  =>  Colorado-Paver-Blocks.png
+
+Combi Paver Blocks
+  =>  Combi-Paver-Blocks.png
+
+Flexi Paver Blocks
+  =>  Flexi-Paver-Blocks.png
+
+Designer Paving Blocks
+  =>  Designer-Paving-Blocks.png
+
+Paving Blocks
+  =>  Paving-Blocks.png
+
+Cable Trays (Perforated with Cover)
+  =>  Cable-Trays-Perforated-with-Cover.png
+
+Cable Tray Fittings (Tee Bend, Reducer)
+  =>  Cable-Tray-Fittings-Tee-Bend-Reducer.png
+
+Profile Ducting with Fittings
+  =>  Profile-Ducting-with-Fittings.png
+
+Duct Supporting Materials
+  =>  Duct-Supporting-Materials.png
+
+Plywood
+  =>  Plywood.png
+
+Ordinary Plywood
+  =>  Ordinary-Plywood.png
+
+Laminated Plywood
+  =>  Laminated-Plywood.png
+
+Pre-Laminated Plywood
+  =>  Pre-Laminated-Plywood.png
+
+Film Faced Plywood
+  =>  Film-Faced-Plywood.png
+
+Marine Plywood
+  =>  Marine-Plywood.png
+
+MDF Board
+  =>  MDF-Board.png
+
+Hardwood
+  =>  Hardwood.png
+
+Timber
+  =>  Timber.png
+
+MEASURING TAPE, FIBER, SIZE: 50 MTR
+  =>  MEASURING-TAPE-FIBER-SIZE-50-MTR.png
+
+MEASURING TAPE, FIBER, SIZE: 30 MTR
+  =>  MEASURING-TAPE-FIBER-SIZE-30-MTR.png
+
+MEASURING TAPE, S/S, SIZE: 3 MTR
+  =>  MEASURING-TAPE-S-S-SIZE-3-MTR.png
+
+HAMMER, CARPENTER, CAPACITY: 0.5 KG, W/ HANDLE
+  =>  HAMMER-CARPENTER-CAPACITY-0-5-KG-W-HANDLE.png
+
+HAMMER, MASONRY, CAPACITY: 1.0 KG, W/ HANDLE
+  =>  HAMMER-MASONRY-CAPACITY-1-0-KG-W-HANDLE.png
+
+HAMMER, MASONRY, CAPACITY: 2.0 KG, W/ HANDLE
+  =>  HAMMER-MASONRY-CAPACITY-2-0-KG-W-HANDLE.png
+
+HAMMER, CHIPPING, CAPACITY: 0.5 KG
+  =>  HAMMER-CHIPPING-CAPACITY-0-5-KG.png
+
+HAMMER, RUBBER, 12 OZ
+  =>  HAMMER-RUBBER-12-OZ.png
+
+HAMMER, SLEDGE, CAPACITY: 5.0 KG, W/ HANDLE
+  =>  HAMMER-SLEDGE-CAPACITY-5-0-KG-W-HANDLE.png
+
+PLIER, END NIPPER, 6"
+  =>  PLIER-END-NIPPER-6.png
+
+4 Ft Length Manual Tile Cutter
+  =>  4-Ft-Length-Manual-Tile-Cutter.png
+
+JOLLY - TIXO STRAW INDIA 1KG
+  =>  JOLLY-TIXO-STRAW-INDIA-1KG.png
+
+WD 40 (420ML)
+  =>  WD-40-420ML.png
+
+FEVI SEAL PU FOAM (Construction Foam) 720g
+  =>  FEVI-SEAL-PU-FOAM-Construction-Foam-720g.png
+
+MYK Laticrete SP-100 Epoxy Tile Grout ; Color: 61 Parchment
+  =>  MYK-Laticrete-SP-100-Epoxy-Tile-Grout-Color-61-Parchment.png
+
+MYK Laticrete SP-100 Epoxy Tile Grout ; Color: White
+  =>  MYK-Laticrete-SP-100-Epoxy-Tile-Grout-Color-White.png
+
+V DRAINS SS304 Clean Out Floor Drain Size: 3x3 inches Outlet:2 inches Item Code:VCO-201 Finish: Mirror
+  =>  V-DRAINS-SS304-Clean-Out-Floor-Drain-Size-3x3-inches-Outlet-2-inches-Item-Code-VCO-201-Finish-Mirror.png
+
+V DRAINS SS304 Clean Out Floor Drain Size: 4x4 inches Outlet:2 inches Item Code:VCO-202 Finish: Mirror
+  =>  V-DRAINS-SS304-Clean-Out-Floor-Drain-Size-4x4-inches-Outlet-2-inches-Item-Code-VCO-202-Finish-Mirror.png
+
+V DRAINS SS304 Clean Out Floor Drain Size: 6x6 inches Outlet:4 inches Item Code:VCO-204 Finish: Mirror
+  =>  V-DRAINS-SS304-Clean-Out-Floor-Drain-Size-6x6-inches-Outlet-4-inches-Item-Code-VCO-204-Finish-Mirror.png
+
+V DRAINS SS304 Clean Out Floor Drain Size: 8x8 inches Outlet:4 inches Item Code:VCO-205 Finish: Mirror
+  =>  V-DRAINS-SS304-Clean-Out-Floor-Drain-Size-8x8-inches-Outlet-4-inches-Item-Code-VCO-205-Finish-Mirror.png
+
+PRY ASIAN PAN NEW FLAT - WHITE
+  =>  PRY-ASIAN-PAN-NEW-FLAT-WHITE.png
+
+PRY SLIMLINE TANK WHITE
+  =>  PRY-SLIMLINE-TANK-WHITE.png
+
+PRY SPARE P TRAP
+  =>  PRY-SPARE-P-TRAP.png
+
+Sikaflex-221 white C108 /12 CTR300
+  =>  Sikaflex-221-white-C108-12-CTR300.png
+
+SikaEmaco S488 Repair Mortar (25Kg)
+  =>  SikaEmaco-S488-Repair-Mortar-25Kg.png
+
+Sika FerroGard-950 IN
+  =>  Sika-FerroGard-950-IN.png
+
+SS304 6mm Chian
+  =>  SS304-6mm-Chian.png
+
+SS 304 D-Shackle 6mm
+  =>  SS-304-D-Shackle-6mm.png
