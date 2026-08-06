@@ -1,6 +1,6 @@
 import type { CatalogProduct } from "@/data/catalog/types";
 import { getCategoryBySlug } from "@/data/categories";
-import { site } from "@/data/site";
+import { formatContactLabel, site } from "@/data/site";
 
 /**
  * Generic marketing description based on product category / keywords.
@@ -162,7 +162,9 @@ CONTACT INFORMATION
 
 ${site.addressBlock}
 
-Phone: ${site.phoneDisplay}
+Phone: ${formatContactLabel(site.contactPrimary)}
+Phone: ${formatContactLabel(site.contactSecondary)}
+WhatsApp: ${formatContactLabel(site.contactPrimary)}
 Email: ${site.email}
 GSTIN: ${site.gstin}
 

@@ -3,6 +3,7 @@ import { Link } from "@tanstack/react-router";
 import { ArrowRight, Menu, X } from "lucide-react";
 import { site, siteLinks } from "@/data/site";
 import { SiteLogo } from "@/components/SiteLogo";
+import { FooterContactsPanel } from "@/components/FooterContactsPanel";
 
 const NAV = [
   { label: "Home", href: "/" },
@@ -99,16 +100,6 @@ export function CatalogFooter() {
           <p className="mt-2 text-sm text-white/55 max-w-md">
             Indian manufacturing & export partner for industrial and commercial buyers worldwide.
           </p>
-          <div className="mt-4 space-y-1 text-sm text-white/70">
-            <a href={siteLinks.phone} className="block hover:text-white transition">
-              {site.phoneDisplay}
-            </a>
-            <a href={siteLinks.email} className="block hover:text-white transition">
-              {site.email}
-            </a>
-            <div className="text-white/55 whitespace-pre-line leading-relaxed">{site.addressMultiline}</div>
-            <div className="text-white/55">GSTIN: {site.gstin}</div>
-          </div>
         </div>
         <div className="flex flex-wrap gap-5 text-sm">
           <Link to="/products" className="hover:text-white transition">
@@ -120,6 +111,14 @@ export function CatalogFooter() {
           <a href="/#contact" className="hover:text-white transition">
             Contact
           </a>
+          <a href={siteLinks.email} className="hover:text-white transition">
+            {site.email}
+          </a>
+        </div>
+      </div>
+      <div className="border-t border-white/10">
+        <div className="container-x py-10 md:py-12">
+          <FooterContactsPanel />
         </div>
       </div>
       <div className="border-t border-white/10">

@@ -1,5 +1,5 @@
 ﻿import { createFileRoute } from "@tanstack/react-router";
-import { useEffect, useState, type FormEvent } from "react";
+import { useEffect, useState } from "react";
 import {
   ArrowRight,
   Mail,
@@ -32,15 +32,15 @@ import {
 
 import aboutMfg from "@/assets/about-manufacturing.jpg";
 import { site, siteLinks } from "@/data/site";
-import { productCategoryNames } from "@/data/categories";
-import { contactEnquirySchema } from "@/lib/contact-enquiry";
-import { sendContactEnquiry } from "@/lib/send-contact-enquiry";
 import { HeroSlider } from "@/components/landing/HeroSlider";
 import { StatsSection } from "@/components/landing/StatsSection";
+import { AuthorizedDealerSection } from "@/components/landing/AuthorizedDealerSection";
 import { ProductCategoriesSection } from "@/components/landing/ProductCategoriesSection";
 import { ExportNetworkSection } from "@/components/landing/ExportNetworkSection";
 import { TrustSection } from "@/components/landing/TrustSection";
+import { ContactSection } from "@/components/landing/ContactSection";
 import { SiteLogo } from "@/components/SiteLogo";
+import { FooterContactsPanel } from "@/components/FooterContactsPanel";
 
 export const Route = createFileRoute("/")({
   component: Landing,
@@ -198,34 +198,75 @@ function useScrollProgress() {
 
 /* ------------------------------ TOP ------------------------------ */
 
+function UtilityChip({
+  href,
+  icon: Icon,
+  children,
+  external,
+}: {
+  href: string;
+  icon: typeof Mail;
+  children: React.ReactNode;
+  external?: boolean;
+}) {
+  return (
+    <a
+      href={href}
+      target={external ? "_blank" : undefined}
+      rel={external ? "noopener noreferrer" : undefined}
+      className="group inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 py-1 pl-1 pr-3 text-[11px] font-semibold text-white/85 transition hover:border-royal/40 hover:bg-white/10 hover:text-white"
+    >
+      <span className="flex h-6 w-6 items-center justify-center rounded-full bg-royal/25 text-royal transition group-hover:bg-royal group-hover:text-white">
+        <Icon className="h-3 w-3" aria-hidden="true" />
+      </span>
+      <span className="whitespace-nowrap">{children}</span>
+    </a>
+  );
+}
+
 function TopContactBar() {
   return (
-    <div className="hidden lg:block bg-navy text-navy-foreground/90 text-xs">
-      <div className="container-x flex h-10 items-center justify-between">
-        <div className="flex items-center gap-6">
-          <a href={siteLinks.email} className="inline-flex items-center gap-2 hover:text-white transition">
-            <Mail className="h-3.5 w-3.5" /> {site.email}
-          </a>
-          <a href={siteLinks.phone} className="inline-flex items-center gap-2 hover:text-white transition">
-            <Phone className="h-3.5 w-3.5" /> {site.phoneDisplay}
-          </a>
-          <a href={siteLinks.whatsapp} className="inline-flex items-center gap-2 hover:text-white transition">
-            <MessageCircle className="h-3.5 w-3.5" /> WhatsApp
-          </a>
-          {siteLinks.linkedin && (
-            <a
-              href={siteLinks.linkedin}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 hover:text-white transition"
-            >
-              <Linkedin className="h-3.5 w-3.5" /> LinkedIn
-            </a>
-          )}
+    <div className="hidden lg:block bg-navy text-navy-foreground/90">
+      <div className="container-x flex h-12 items-center justify-between gap-4">
+        <div className="flex items-center gap-2 min-w-0 overflow-x-auto py-1">
+          <UtilityChip href={siteLinks.email} icon={Mail}>
+            {site.email}
+          </UtilityChip>
+          <span className="h-4 w-px shrink-0 bg-white/15" aria-hidden="true" />
+          <UtilityChip href={siteLinks.phone} icon={Phone}>
+            {site.contactPrimary.channel}
+            <span className="ml-1.5 font-medium text-white/70">{site.contactPrimary.display}</span>
+          </UtilityChip>
+          <span className="h-4 w-px shrink-0 bg-white/15" aria-hidden="true" />
+          <UtilityChip href={siteLinks.phoneSecondary} icon={Phone}>
+            {site.contactSecondary.channel}
+            <span className="ml-1.5 font-medium text-white/70">{site.contactSecondary.display}</span>
+          </UtilityChip>
+          <span className="h-4 w-px shrink-0 bg-white/15" aria-hidden="true" />
+          <UtilityChip href={siteLinks.whatsapp} icon={MessageCircle} external>
+            WhatsApp
+          </UtilityChip>
+          {siteLinks.linkedin ? (
+            <>
+              <span className="h-4 w-px shrink-0 bg-white/15" aria-hidden="true" />
+              <UtilityChip href={siteLinks.linkedin} icon={Linkedin} external>
+                LinkedIn
+              </UtilityChip>
+            </>
+          ) : null}
         </div>
-        <div className="flex items-center gap-4">
-          <span className="inline-flex items-center gap-1.5 opacity-80">
-            <Globe className="h-3.5 w-3.5" /> {site.hqShort}
+
+        <div className="flex items-center gap-3 shrink-0">
+          <span className="inline-flex items-center gap-1.5 text-[11px] font-medium text-white/75">
+            <Globe className="h-3.5 w-3.5 text-royal" aria-hidden="true" />
+            Coimbatore, Tamil Nadu, India
+          </span>
+          <span className="inline-flex items-center gap-1.5 rounded-full border border-royal/30 bg-royal/15 px-2.5 py-1 text-[10px] font-semibold uppercase tracking-wider text-blue-100">
+            <span className="relative flex h-1.5 w-1.5">
+              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-60" />
+              <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-emerald-400" />
+            </span>
+            Responds within 24 Hours
           </span>
         </div>
       </div>
@@ -541,244 +582,6 @@ function FAQ() {
   );
 }
 
-/* ---------------------------- CONTACT ---------------------------- */
-
-const ENQUIRY_ERROR_MESSAGE =
-  "Something went wrong while sending your enquiry.\n\nPlease try again later or contact us directly at\nhalieximsindia@gmail.com";
-
-function Contact() {
-  const [sent, setSent] = useState(false);
-  const [sending, setSending] = useState(false);
-  const [error, setError] = useState<string | null>(null);
-  const [fieldError, setFieldError] = useState<string | null>(null);
-
-  async function handleSubmit(e: FormEvent<HTMLFormElement>) {
-    e.preventDefault();
-    if (sending) return;
-
-    setError(null);
-    setFieldError(null);
-
-    const form = e.currentTarget;
-    const fd = new FormData(form);
-
-    const category = String(fd.get("category") ?? "").trim();
-    const product = String(fd.get("product") ?? "").trim();
-    const qty = String(fd.get("qty") ?? "").trim();
-    const messageParts = [
-      String(fd.get("message") ?? "").trim(),
-      product ? `Product / Specification: ${product}` : "",
-      qty ? `Quantity: ${qty}` : "",
-    ].filter(Boolean);
-
-    const payload = {
-      name: String(fd.get("name") ?? ""),
-      company: String(fd.get("company") ?? ""),
-      email: String(fd.get("email") ?? ""),
-      phone: String(fd.get("phone") ?? ""),
-      country: String(fd.get("country") ?? ""),
-      subject: category,
-      message: messageParts.join("\n\n"),
-    };
-
-    const parsed = contactEnquirySchema.safeParse(payload);
-    if (!parsed.success) {
-      setFieldError(parsed.error.issues[0]?.message ?? "Please fill in all required fields.");
-      return;
-    }
-
-    setSending(true);
-    try {
-      const result = await sendContactEnquiry({ data: parsed.data });
-      if (!result.ok) {
-        setError(result.message || ENQUIRY_ERROR_MESSAGE);
-        return;
-      }
-      form.reset();
-      setSent(true);
-    } catch (err) {
-      console.error(err);
-      setError(ENQUIRY_ERROR_MESSAGE);
-    } finally {
-      setSending(false);
-    }
-  }
-
-  return (
-    <section id="contact" className="relative section-y bg-navy text-white overflow-hidden">
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_10%,rgba(37,99,235,0.35),transparent_55%)]" />
-      <div className="relative container-x grid lg:grid-cols-12 gap-14">
-        <div className="lg:col-span-5">
-          <div className="eyebrow text-royal/90">
-            <ArrowRight className="h-3.5 w-3.5" /> Request a Quote
-          </div>
-          <h2 className="mt-4 font-display text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight leading-[1.05] text-balance">
-            Tell us what you need. We'll respond within 24 hours.
-          </h2>
-          <p className="mt-6 text-white/70 text-lg leading-relaxed">
-            Share your requirement, target destination and timeline. A dedicated export manager will get in touch
-            with a proforma, samples where relevant, and a shipping plan.
-          </p>
-
-          <div className="mt-10 space-y-4">
-            {[
-              { icon: Mail, label: "Email", value: site.email, href: siteLinks.email },
-              { icon: Phone, label: "Phone", value: site.phoneDisplay, href: siteLinks.phone },
-              { icon: MessageCircle, label: "WhatsApp", value: site.phoneDisplay, href: siteLinks.whatsapp },
-              {
-                icon: MapPin,
-                label: "Address",
-                value: site.addressMultiline,
-                href: siteLinks.maps,
-                multiline: true,
-              },
-              { icon: BadgeCheck, label: "GSTIN", value: site.gstin },
-            ].map((c) => (
-              <div key={c.label} className={`flex gap-4 ${"multiline" in c && c.multiline ? "items-start" : "items-center"}`}>
-                <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-white/10 text-white">
-                  <c.icon className="h-5 w-5" />
-                </div>
-                <div>
-                  <div className="text-xs uppercase tracking-widest text-white/50">{c.label}</div>
-                  {"href" in c && c.href ? (
-                    <a
-                      href={c.href}
-                      target={"multiline" in c && c.multiline ? "_blank" : undefined}
-                      rel={"multiline" in c && c.multiline ? "noopener noreferrer" : undefined}
-                      className={`font-semibold hover:text-white/90 transition ${"multiline" in c && c.multiline ? "whitespace-pre-line" : ""}`}
-                    >
-                      {c.value}
-                    </a>
-                  ) : (
-                    <div className={`font-semibold ${"multiline" in c && c.multiline ? "whitespace-pre-line" : ""}`}>
-                      {c.value}
-                    </div>
-                  )}
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        <form
-          onSubmit={handleSubmit}
-          className="lg:col-span-7 rounded-3xl bg-white p-8 md:p-10 shadow-elevated text-foreground"
-          noValidate
-        >
-          {sent ? (
-            <div className="text-center py-16">
-              <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-royal/10 text-royal">
-                <BadgeCheck className="h-8 w-8" />
-              </div>
-              <h3 className="mt-6 font-display text-2xl font-bold text-navy">Enquiry Submitted Successfully</h3>
-              <p className="mt-2 text-muted-foreground max-w-md mx-auto">
-                Thank you for contacting HALI EXIMS.
-                <br />
-                <br />
-                We have received your enquiry and our team will get back to you within 24 hours.
-              </p>
-            </div>
-          ) : (
-            <>
-              <div className="font-display text-2xl font-bold text-navy">Buyer Inquiry Form</div>
-              <p className="text-sm text-muted-foreground mt-1">All fields marked * are required.</p>
-
-              {(fieldError || error) && (
-                <div
-                  role="alert"
-                  className="mt-5 rounded-xl border border-red-200 bg-red-50 px-4 py-3 text-sm text-red-700 whitespace-pre-line"
-                >
-                  {fieldError || error}
-                </div>
-              )}
-
-              <div className="mt-8 grid sm:grid-cols-2 gap-5">
-                <Field label="Full Name*" name="name" placeholder="Jane Doe" required />
-                <Field label="Company*" name="company" placeholder="Company Ltd." />
-                <Field label="Country*" name="country" placeholder="e.g. United Arab Emirates" required />
-                <Field label="Email*" name="email" type="email" placeholder="you@company.com" required />
-                <Field label="Phone" name="phone" placeholder="+___" required />
-                <Select label="Product Category*" name="category" options={productCategoryNames} />
-                <Field label="Product / Specification" name="product" placeholder="e.g. TMT Fe500 12mm" />
-                <Field label="Quantity" name="qty" placeholder="e.g. 20MT / 1x40HC" />
-              </div>
-
-              <div className="mt-5">
-                <label className="text-sm font-semibold text-navy">Message</label>
-                <textarea
-                  name="message"
-                  rows={4}
-                  required
-                  placeholder="Destination port, target price, timeline, specifications…"
-                  className="mt-2 w-full rounded-xl border border-border bg-surface px-4 py-3 focus:outline-none focus:ring-2 focus:ring-royal/40 focus:border-royal transition"
-                />
-              </div>
-
-              <div className="mt-5 flex flex-col md:flex-row md:items-center md:justify-between gap-4">
-                <label className="inline-flex items-center gap-3 rounded-xl border border-dashed border-border bg-surface px-4 py-3 cursor-pointer hover:border-navy transition">
-                  <FileText className="h-4 w-4 text-royal" />
-                  <span className="text-sm font-medium text-navy">Attach specification (PDF, XLS, JPG)</span>
-                  <input type="file" className="hidden" />
-                </label>
-                <button
-                  type="submit"
-                  className="btn-accent disabled:opacity-60 disabled:cursor-not-allowed"
-                  disabled={sending}
-                  aria-busy={sending}
-                >
-                  {sending ? (
-                    "Sending..."
-                  ) : (
-                    <>
-                      Submit Inquiry <ArrowRight className="h-4 w-4" />
-                    </>
-                  )}
-                </button>
-              </div>
-            </>
-          )}
-        </form>
-      </div>
-    </section>
-  );
-}
-
-function Field({
-  label, name, type = "text", placeholder, required,
-}: { label: string; name: string; type?: string; placeholder?: string; required?: boolean }) {
-  return (
-    <div>
-      <label className="text-sm font-semibold text-navy">{label}</label>
-      <input
-        name={name}
-        type={type}
-        placeholder={placeholder}
-        required={required}
-        className="mt-2 w-full rounded-xl border border-border bg-surface px-4 py-3 focus:outline-none focus:ring-2 focus:ring-royal/40 focus:border-royal transition"
-      />
-    </div>
-  );
-}
-
-function Select({ label, name, options }: { label: string; name: string; options: string[] }) {
-  return (
-    <div>
-      <label className="text-sm font-semibold text-navy">{label}</label>
-      <select
-        name={name}
-        className="mt-2 w-full rounded-xl border border-border bg-surface px-4 py-3 focus:outline-none focus:ring-2 focus:ring-royal/40 focus:border-royal transition"
-      >
-        <option value="">Selectâ€¦</option>
-        {options.map((o) => (
-          <option key={o} value={o}>
-            {o}
-          </option>
-        ))}
-      </select>
-    </div>
-  );
-}
-
 /* ------------------------------ FOOTER ------------------------------ */
 
 function Footer() {
@@ -860,35 +663,18 @@ function Footer() {
               Subscribe
             </button>
           </form>
-          <div className="mt-8 text-sm">
-            <div className="text-white/50 text-xs uppercase tracking-widest">Head Office</div>
-            <div className="mt-2 text-white/80 whitespace-pre-line leading-relaxed">
-              {site.name}
-              {"\n\n"}
-              {site.addressMultiline}
-            </div>
-            <div className="mt-3 space-y-1 text-white/80">
-              <div>
-                Phone:{" "}
-                <a href={siteLinks.phone} className="hover:text-white transition">
-                  {site.phoneDisplay}
-                </a>
-              </div>
-              <div>
-                Email:{" "}
-                <a href={siteLinks.email} className="hover:text-white transition">
-                  {site.email}
-                </a>
-              </div>
-              <div>GSTIN: {site.gstin}</div>
-            </div>
-          </div>
+        </div>
+      </div>
+
+      <div className="border-t border-white/10">
+        <div className="container-x py-12 md:py-14">
+          <FooterContactsPanel />
         </div>
       </div>
 
       <div className="border-t border-white/10">
         <div className="container-x py-6 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-white/50">
-          <div>Â© {new Date().getFullYear()} {site.name}. All rights reserved.</div>
+          <div>© {new Date().getFullYear()} {site.name}. All rights reserved.</div>
           <div className="flex gap-6">
             <span>Privacy</span>
             <span>Terms</span>
@@ -969,6 +755,7 @@ function Landing() {
       <main>
         <Hero />
         <StatsSection stats={STATS} />
+        <AuthorizedDealerSection />
         <About />
         <ProductCategoriesSection />
         <ExportNetworkSection />
@@ -976,7 +763,7 @@ function Landing() {
         <Commitment />
         <TrustSection />
         <FAQ />
-        <Contact />
+        <ContactSection />
       </main>
       <Footer />
       <FloatingActions />
