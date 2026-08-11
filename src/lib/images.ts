@@ -68,3 +68,12 @@ export function nextImageCandidate(currentSrc: string, fallback: string): string
 
   return fallback;
 }
+
+/** Categories with packaging / white-background shots that should show fully (not cropped). */
+const CONTAIN_FIT_CATEGORIES = new Set(["construction-chemicals-repair-materials"]);
+
+export function productImageFitClass(categorySlug: string): string {
+  return CONTAIN_FIT_CATEGORIES.has(categorySlug)
+    ? "object-contain p-3 sm:p-4"
+    : "object-cover";
+}

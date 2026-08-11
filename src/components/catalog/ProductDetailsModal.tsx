@@ -12,6 +12,7 @@ import {
   downloadProductDetails,
   generateProductDescription,
 } from "@/lib/productDetails";
+import { productImageFitClass } from "@/lib/images";
 
 type ProductDetailsModalProps = {
   product: CatalogProduct | null;
@@ -48,12 +49,12 @@ export function ProductDetailsModal({ product, isOpen, onClose }: ProductDetails
 
         <div className="grid gap-6 px-5 py-5 sm:px-7 sm:py-6 md:grid-cols-2 md:gap-8">
           <div>
-            <div className="overflow-hidden rounded-xl border border-border bg-surface">
+            <div className="overflow-hidden rounded-xl border border-border bg-white">
               <CatalogImg
                 kind="product"
                 src={product.image}
                 alt={product.title}
-                className="aspect-[5/3.4] w-full object-cover"
+                className={`aspect-[5/3.4] w-full ${productImageFitClass(product.categorySlug)}`}
                 width={800}
                 height={560}
               />

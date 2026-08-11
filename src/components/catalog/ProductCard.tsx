@@ -5,6 +5,7 @@ import type { CatalogProduct } from "@/data/catalog/types";
 import { siteLinks } from "@/data/site";
 import { ProductDetailsModal } from "@/components/catalog/ProductDetailsModal";
 import { CatalogImg } from "@/components/catalog/CatalogImg";
+import { productImageFitClass } from "@/lib/images";
 
 type ProductCardProps = {
   product: CatalogProduct;
@@ -13,6 +14,7 @@ type ProductCardProps = {
 export function ProductCard({ product }: ProductCardProps) {
   const [detailsOpen, setDetailsOpen] = useState(false);
   const cardSpecs = product.specifications.slice(0, 6);
+  const imageFit = productImageFitClass(product.categorySlug);
 
   return (
     <>
@@ -20,13 +22,13 @@ export function ProductCard({ product }: ProductCardProps) {
         <Link
           to="/products/$category/$product"
           params={{ category: product.categorySlug, product: product.slug }}
-          className="relative aspect-[5/3.4] overflow-hidden bg-surface block"
+          className="relative aspect-[5/3.4] overflow-hidden bg-white block"
         >
           <CatalogImg
             kind="product"
             src={product.image}
             alt={product.title}
-            className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-[1.04]"
+            className={`h-full w-full transition-transform duration-700 group-hover:scale-[1.04] ${imageFit}`}
             loading="lazy"
             width={800}
             height={560}

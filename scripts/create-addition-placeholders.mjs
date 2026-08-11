@@ -102,6 +102,7 @@ const productTitles = [
   "Sikaflex-221 white C108 /12 CTR300",
   "SikaEmaco S488 Repair Mortar (25Kg)",
   "Sika FerroGard-950 IN",
+  "SikaEmaco SBR 2 (20L)",
   "SS304 6mm Chian",
   "SS 304 D-Shackle 6mm",
 ];

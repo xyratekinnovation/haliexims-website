@@ -220,13 +220,79 @@ const tilesSanitaryAdditions = withSectionRelated([
 
 const CHEMICALS = "construction-chemicals-repair-materials";
 
-const constructionChemicalsProducts = withSectionRelated(
-  sectionProducts(CHEMICALS, "sealants-repair", "SEALANTS & REPAIR", [
+const constructionChemicalsProducts = withSectionRelated([
+  ...sectionProducts(CHEMICALS, "sealants-repair", "SEALANTS & REPAIR", [
     "Sikaflex-221 white C108 /12 CTR300",
     "SikaEmaco S488 Repair Mortar (25Kg)",
-    "Sika FerroGard-950 IN",
   ]),
-);
+  {
+    ...placeholderProduct({
+      categorySlug: CHEMICALS,
+      sectionSlug: "sealants-repair",
+      title: "Sika FerroGard-950 IN",
+      badge: "SEALANTS & REPAIR",
+    }),
+    shortDescription:
+      "Reinforcement corrosion inhibitor for concrete protection and reinforcement corrosion control.",
+    description:
+      "Sika FerroGard-950 IN is a reinforcement corrosion inhibitor used for concrete protection and reinforcement corrosion control. Contact HALI EXIMS for current specifications, availability, and export quotations.",
+    specifications: [
+      { label: "Product Type", value: "Reinforcement Corrosion Inhibitor" },
+      { label: "Use", value: "Concrete protection and reinforcement corrosion control" },
+      { label: "Brand", value: "Sika" },
+      { label: "Application Area", value: "Reinforced concrete structures" },
+    ],
+    specPreview: [
+      "Product Type: Reinforcement Corrosion Inhibitor",
+      "Use: Concrete protection and reinforcement corrosion control",
+      "Brand: Sika",
+    ],
+    features: [
+      "Reinforcement corrosion inhibitor",
+      "Supports concrete protection programmes",
+      "Export enquiry available",
+    ],
+    applications: [
+      "Concrete protection",
+      "Reinforcement corrosion control",
+      "Construction and repair works",
+    ],
+  },
+  {
+    ...placeholderProduct({
+      categorySlug: CHEMICALS,
+      sectionSlug: "sealants-repair",
+      title: "SikaEmaco SBR 2 (20L)",
+      badge: "SEALANTS & REPAIR",
+    }),
+    shortDescription:
+      "SBR polymer bonding agent for concrete and mortar applications, supplied in a 20L pack.",
+    description:
+      "SikaEmaco SBR 2 (20L) is an SBR polymer / concrete and mortar bonding agent for construction and repair works. Contact HALI EXIMS for current specifications, availability, and export quotations.",
+    specifications: [
+      { label: "Product Type", value: "SBR Polymer / Concrete & Mortar Bonding Agent" },
+      { label: "Pack Size", value: "20L" },
+      { label: "Brand", value: "Sika" },
+      { label: "Application Area", value: "Concrete and mortar bonding" },
+    ],
+    specPreview: [
+      "Product Type: SBR Polymer / Concrete & Mortar Bonding Agent",
+      "Pack Size: 20L",
+      "Brand: Sika",
+    ],
+    features: [
+      "SBR polymer bonding agent",
+      "Suitable for concrete and mortar applications",
+      "20L pack size",
+      "Export enquiry available",
+    ],
+    applications: [
+      "Concrete bonding",
+      "Mortar bonding",
+      "Construction and repair works",
+    ],
+  },
+]);
 
 /* -------------------------------------------------------------------------- */
 /* 8. Stainless Steel Hardware (existing steel category)                      */

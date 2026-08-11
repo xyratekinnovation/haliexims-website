@@ -52,7 +52,11 @@ function ProductDetailPage() {
       <section className="section-y">
         <div className="container-x grid lg:grid-cols-12 gap-10 lg:gap-14">
           <div className="lg:col-span-7">
-            <ProductGallery title={product.title} images={product.gallery} />
+            <ProductGallery
+              title={product.title}
+              images={product.gallery}
+              categorySlug={product.categorySlug}
+            />
           </div>
 
           <div className="lg:col-span-5">

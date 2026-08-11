@@ -180,6 +180,9 @@ SikaEmaco S488 Repair Mortar (25Kg)
 Sika FerroGard-950 IN
   =>  Sika-FerroGard-950-IN.png
 
+SikaEmaco SBR 2 (20L)
+  =>  SikaEmaco-SBR-2-20L.png
+
 SS304 6mm Chian
   =>  SS304-6mm-Chian.png
 
