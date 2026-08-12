@@ -1,5 +1,6 @@
 import type { CatalogProduct, SpecRow } from "./catalog/types";
 import { toProductImageFileName } from "@/lib/images";
+import { sikaExcelProducts } from "./sika-excel-products";
 
 const PLACEHOLDER_SHORT =
   "Product details coming soon. Contact HALI EXIMS for specifications and quotations.";
@@ -292,6 +293,7 @@ const constructionChemicalsProducts = withSectionRelated([
       "Construction and repair works",
     ],
   },
+  ...sikaExcelProducts,
 ]);
 
 /* -------------------------------------------------------------------------- */

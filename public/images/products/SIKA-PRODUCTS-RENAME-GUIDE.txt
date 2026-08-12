@@ -1,0 +1,169 @@
+SIKA PRODUCT IMAGE RENAME GUIDE
+===============================
+
+Folder to paste into:
+  public/images/products/
+
+Instructions:
+  1. Rename your image to the EXACT filename in the right column.
+  2. Prefer .png (.jpg also works).
+  3. Paste/replace the file in public/images/products/
+  4. Keep the same name — do not change code.
+
+PRODUCT NAME  =>  EXACT FILENAME
+--------------------------------
+Waterproofing Admixture SikaCim Pink (1Kg)
+  =>  Waterproofing-Admixture-SikaCim-Pink-1Kg.png
+
+SikaCim Pink (20Kg)
+  =>  SikaCim-Pink-20Kg.png
+
+SikaCim Pink (5Kg)
+  =>  SikaCim-Pink-5Kg.png
+
+SikaMent FFT( VC ) (20Kg)
+  =>  SikaMent-FFT-VC-20Kg.png
+
+SikaMent FFT( VC ) 230Kg
+  =>  SikaMent-FFT-VC-230Kg.png
+
+SikaPlast 1000 ES 230Kg
+  =>  SikaPlast-1000-ES-230Kg.png
+
+SikaPlast 100 FFT VC 230Kg
+  =>  SikaPlast-100-FFT-VC-230Kg.png
+
+SikaPlast 5202 NS 255Kg
+  =>  SikaPlast-5202-NS-255Kg.png
+
+SikaBlock (30Kg)
+  =>  SikaBlock-30Kg.png
+
+SikaGrout 214IN (30Kg)
+  =>  SikaGrout-214IN-30Kg.png
+
+SikaGrout 870 IN - (25Kg) Bag
+  =>  SikaGrout-870-IN-25Kg-Bag.png
+
+SikaREP Microcrete 4, (30kg)
+  =>  SikaREP-Microcrete-4-30kg.png
+
+SikaTop - 122 HS, (30Kg)
+  =>  SikaTop-122-HS-30Kg.png
+
+432563 Sika Fabric 50M
+  =>  432563-Sika-Fabric-50M.png
+
+SikaSeal Tape F 10m
+  =>  SikaSeal-Tape-F-10m.png
+
+SikaSeal Tape F 50m
+  =>  SikaSeal-Tape-F-50m.png
+
+SikaMultiseal Tape 10m
+  =>  SikaMultiseal-Tape-10m.png
+
+Sikagard 5310-(5kg)
+  =>  Sikagard-5310-5kg.png
+
+Sikagard 552W (10kg)
+  =>  Sikagard-552W-10kg.png
+
+Sikagard XT white (25kg)
+  =>  Sikagard-XT-white-25kg.png
+
+SikaLatex SBR (1Kg)
+  =>  SikaLatex-SBR-1Kg.png
+
+SikaLatex SBR (20Kg)
+  =>  SikaLatex-SBR-20Kg.png
+
+SikaLatex SBR (5Kg)
+  =>  SikaLatex-SBR-5Kg.png
+
+SikaMono Top-122 F, (30Kg)
+  =>  SikaMono-Top-122-F-30Kg.png
+
+SikaRustoff 1 Kg
+  =>  SikaRustoff-1-Kg.png
+
+SikaRustop 1.25kg
+  =>  SikaRustop-1-25kg.png
+
+SikaCeram 125 EasyFix - (20Kg)
+  =>  SikaCeram-125-EasyFix-20Kg.png
+
+SikaCeram 155 Grey Tilofix (25Kg)
+  =>  SikaCeram-155-Grey-Tilofix-25Kg.png
+
+SikaCeram 155 Wet Room Grey (20Kg)
+  =>  SikaCeram-155-Wet-Room-Grey-20Kg.png
+
+SikaCeram 212 Grey Tilofix (25Kg)
+  =>  SikaCeram-212-Grey-Tilofix-25Kg.png
+
+SikaCeram 255 Grey Tilofix (25Kg)
+  =>  SikaCeram-255-Grey-Tilofix-25Kg.png
+
+SikaCeram 288 Grey Tilofix (25Kg)
+  =>  SikaCeram-288-Grey-Tilofix-25Kg.png
+
+SikaCeram 50 Grey Tilofix (20Kg)
+  =>  SikaCeram-50-Grey-Tilofix-20Kg.png
+
+SikaChapDur (30kg)
+  =>  SikaChapDur-30kg.png
+
+SikaDur 32 LP (6Kg)
+  =>  SikaDur-32-LP-6Kg.png
+
+SikaGard 67 (A+B) (4Kg)
+  =>  SikaGard-67-A-B-4Kg.png
+
+SikaLastic 450 - (20Kg)
+  =>  SikaLastic-450-20Kg.png
+
+Sikalastic 510 Coolcoat Terracoatta (25Kg)
+  =>  Sikalastic-510-Coolcoat-Terracoatta-25Kg.png
+
+Sikalastic 510 Coolcoat White (25Kg)
+  =>  Sikalastic-510-Coolcoat-White-25Kg.png
+
+SikaLastic 590 White (20Kg)
+  =>  SikaLastic-590-White-20Kg.png
+
+SikaTopseal 107(A+B) (25Kg)
+  =>  SikaTopseal-107A-B-25Kg.png
+
+SikaTopSeal - 109 (A+B) (50Kg)
+  =>  SikaTopSeal-109-A-B-50Kg.png
+
+Sika Block 30 KG
+  =>  Sika-Block-30-KG.png
+
+Sikagard-399 Primer (20kg)
+  =>  Sikagard-399-Primer-20kg.png
+
+Sikagard-300White(20Kg)
+  =>  Sikagard-300White20Kg.png
+
+Sikaflex 221 black C108/12 CTR300
+  =>  Sikaflex-221-black-C108-12-CTR300.png
+
+SikaShield P24 MG IN - 4mm (Roll)
+  =>  SikaShield-P24-MG-IN-4mm-Roll.png
+
+SikaGard P 770N (A+B) - (10Kg) Set
+  =>  SikaGard-P-770N-A-B-10Kg-Set.png
+
+SikaGard M790 (A+B) - Red (5Kg) Set
+  =>  SikaGard-M790-A-B-Red-5Kg-Set.png
+
+Sikagard 62 IN (A+B) - (8Kg)
+  =>  Sikagard-62-IN-A-B-8Kg.png
+
+Sikalastic HLM 5000R - (25Kg)
+  =>  Sikalastic-HLM-5000R-25Kg.png
+
+Sika Shield Primer S IN (20L)
+  =>  Sika-Shield-Primer-S-IN-20L.png
